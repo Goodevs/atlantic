@@ -1,0 +1,250 @@
+/*
+ * Licensed to the Apache Software Foundation (ASF) under one
+ * or more contributor license agreements.  See the NOTICE file
+ * distributed with this work for additional information
+ * regarding copyright ownership.  The ASF licenses this file
+ * to you under the Apache License, Version 2.0 (the
+ * "License"); you may not use this file except in compliance
+ * with the License.  You may obtain a copy of the License at
+ *
+ * http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing,
+ * software distributed under the License is distributed on an
+ * "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
+ * KIND, either express or implied.  See the License for the
+ * specific language governing permissions and limitations
+ * under the License.
+ */
+* {
+    -webkit-tap-highlight-color: rgba(0,0,0,0); /* make transparent link selection, adjust last value opacity 0 to 1.0 */
+}
+
+body {
+    -webkit-touch-callout: none;                /* prevent callout to copy image, etc when tap to hold */
+    -webkit-text-size-adjust: none;             /* prevent webkit from resizing text to fit */
+    -webkit-user-select: none;                  /* prevent copy paste, to allow, change 'none' to 'text' */
+    background-color:#f5f5f5;
+    font-family:'HelveticaNeue-Light', 'HelveticaNeue', Helvetica, Arial, sans-serif;
+    font-size:12px;
+    height:100%;
+    margin:0px;
+    padding:0px;
+    width:100%;
+}
+
+
+h1 {
+    font-size:24px;
+    font-weight:normal;
+    margin:0px;
+    overflow:visible;
+    padding:0px;
+    text-align:center;
+}
+
+.event {
+    border-radius:4px;
+    -webkit-border-radius:4px;
+    color:#FFFFFF;
+    font-size:12px;
+    margin:0px 30px;
+    padding:2px 0px;
+}
+
+.event.listening {
+    background-color:#333333;
+    display:block;
+}
+
+.event.received {
+    background-color:#4B946A;
+    display:none;
+}
+
+header {
+  background: #151f37;
+  height: 12vh;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+
+header h1 {
+  color: #fff;
+}
+
+.calendar {
+  height: 20vh;
+  width: 100%;
+  background: #ececec;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+@keyframes fade {
+    from { opacity: 1.0; }
+    50% { opacity: 0.4; }
+    to { opacity: 1.0; }
+}
+
+@-webkit-keyframes fade {
+    from { opacity: 1.0; }
+    50% { opacity: 0.4; }
+    to { opacity: 1.0; }
+}
+
+.blink {
+    animation:fade 3000ms infinite;
+    -webkit-animation:fade 3000ms infinite;
+}
+
+#deviceready {
+  margin-top: 4px;
+  margin-bottom: 4px;
+}
+
+h1, h2, h3, h4 {
+  text-align: center;
+}
+.calendar ul {
+  flex-direction: row;
+}
+
+.calendar li {
+  padding: 10px;
+}
+
+ul {
+  display: flex;
+  width: 80%;
+  padding: 0;
+  margin: auto;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+}
+ul li {
+  list-style: none;
+}
+
+.jobs ul li, .job-details ul li {
+  display: flex;
+  width: 98%;
+  margin-top: 3vh;
+  padding-bottom: 2vh;
+  border-bottom: 1px solid #d6d6d6;
+}
+
+.job-details ul li {
+  align-items: center;
+}
+
+.job-details p {
+  margin: auto;
+}
+
+.job-details ul li img {
+  max-height: 7vh;
+}
+
+.job-details li {
+  font-size: 1.2rem;
+  color: #363535;
+}
+
+.icon img {
+  max-height: 6vh;
+}
+
+li a {
+  font-size: 1.2rem;
+  color: #363535;
+  text-decoration: none;
+}
+li a span.title {
+  font-weight: bold;
+}
+.status {
+  margin-right: 30px;
+  display: block;
+  width: 20px;
+  height: 20px;
+  border-radius: 100%;
+  background: #f6f6f6;
+  box-shadow: 0 0 15px rgba(0,0,0,.2);
+}
+
+li.today {
+  border: 1px solid #5276ce;
+  background: #fff;
+  border-radius: 20px;
+}
+
+
+/* parse the web */
+#login {
+  background: #fff;
+}
+#login main {
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+#login h1 {font-weight: 300;margin: 30px;}
+
+img.logo {
+  height: 95px;
+  width: 223px;
+  margin: auto;
+}
+main .login {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.login {
+  display: flex;
+  align-items: center;
+  max-width: 320px;
+  height: 400px;
+  margin: auto;
+  /* background: #fff;
+  border-radius: 10px;
+  box-shadow: 0 0 30px rgba(0,0,0,0.1); */
+}
+
+.login .login_content {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  padding: 30px;
+}
+
+.login input[type=text], .login input[type=password] {
+  background: #f5f5f5;
+  border: 0;
+  padding-left: 15px;
+  width: 265px;
+  font-size: .8rem;
+  font-weight: 300;
+}
+.login input[type=submit] {
+  height: 50px;
+  background: #456fbc;
+  color: #fff;
+  font-size: 1.2rem;
+  width: 280px;
+  padding-left: 0 !important;
+}
+.login input {
+  margin: 10px;
+  height: 50px;
+  -webkit-appearance: none;
+  border-radius: 4px;
+}
