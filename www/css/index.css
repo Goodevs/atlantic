@@ -139,6 +139,16 @@ ul li {
   border-bottom: 1px solid #d6d6d6;
 }
 
+.alerts ul li {
+  display: flex;
+  width: 98%;
+  margin-top: 3vh;
+  padding-bottom: 2vh;
+  background: #fff;
+  padding: 13px;
+  border-radius: 5px;
+}
+
 .job-details ul li {
   align-items: center;
 }
